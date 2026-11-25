@@ -1,0 +1,32 @@
+:root {
+    color-scheme: dark;
+
+    --color-bg: #0f1115;
+    --color-surface: #181d25;
+    --color-text: #f4f6fa;
+    --color-muted: #a0abba;
+    --color-border: #2a3442;
+    --color-accent: #4ea1fa;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Manrope", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}

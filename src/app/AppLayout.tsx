@@ -1,18 +1,21 @@
-import {Link, Outlet} from "react-router";
+import {NavLink, Outlet} from "react-router";
+import styles from "./AppLayout.module.css";
 
 export default function AppLayout() {
     return (
-        <div>
-            <header>
-                <span>FitCoach</span>
-                <nav>
-                    <Link to="/login">Вход</Link>
-                    <Link to="/coach/clients">Клиенты</Link>
-                    <Link to="/client/program">Программа тренировок</Link>
-                </nav>
+        <div className={styles.layout}>
+            <header className={styles.header}>
+                <div className={styles.headerInner}>
+                    <span className={styles.logo}>FitCoach</span>
+                    <nav className={styles.nav}>
+                        <NavLink to="/login">Вход</NavLink>
+                        <NavLink to="/coach/clients">Клиенты</NavLink>
+                        <NavLink to="/client/program">Программа тренировок</NavLink>
+                    </nav>
+                </div>
             </header>
 
-            <main>
+            <main className={styles.main}>
                 <Outlet />
             </main>
         </div>
